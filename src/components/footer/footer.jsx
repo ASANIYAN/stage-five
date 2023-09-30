@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <footer className="bg-color4 py-16 px-10 mt-20 flex justify-between">
-            <section className="flex items-center gap-1.5">
+            <section className="flex mb-auto items-center gap-1.5">
                 <img src={logo_white} width={40} height={40}  alt="white logo" />
                 <span className="font-bold text-white"> HelpMeOut </span>
             </section>

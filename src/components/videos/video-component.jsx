@@ -78,9 +78,9 @@ const VideoComponent = () => {
                     <div className="flex mt-5 gap-2.5 items-center p-2 w-fit border border-[#CFCFCF]"> <p className="text-[#9D9D9D] font-normal"> English </p>  <ArrowDown2 size={16} color="#BBBBBB" /> </div>
                 </section>
 
-                <section className="mt-5 flex gap-5">
+                <section className="mt-5 flex gap-5 max-h-[260px] overflow-y-auto">
                     <span className="text-color2 text-xl font-medium"> 0.01 </span>
-                    <span className="text-black text-lg font-normal "> 
+                    <span className="text-black font-normal "> 
                         First step. Open Facebook on your desktop or mobile device and locate &quot;Marketplace&quot; in the left-hand menu or at the top of the First step. Open Facebook on your desktop or mobile device and locate &quot;Marketplace&quot; in the left-hand menu or at the top of the  
                     </span>
                 </section>
