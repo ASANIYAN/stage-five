@@ -46,7 +46,7 @@ const VideosComponent = () => {
                     
                     <section className="flex flex-wrap gap-6">
                         
-                       {  cookies.videosURLFromCloudinary.map((video, index) => (
+                       { cookies?.videosURLFromCloudinary && cookies.videosURLFromCloudinary.map((video, index) => (
                                 <section 
                                     key={index} 
                                     className="mt-5 w-[550px] h-[320px]"
