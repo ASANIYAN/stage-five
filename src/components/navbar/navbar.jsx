@@ -12,7 +12,7 @@ const Navbar = () => {
             </Link>
             <ul className="text-black font-medium flex items-center gap-5">
                 <Link to="/videos"> <li> Videos </li> </Link>
-                <li> How it Works </li>
+                <Link to="/signup"> <li> Login/Signup </li> </Link>
             </ul>
 
             <Link to={"/"}>

@@ -2,15 +2,18 @@ import logo from "../../assets/logo.svg";
 import fb from "../../assets/fb.svg";
 import google from "../../assets/google.svg";
 import CustomInput from "../input/custom-input";
+import { Link } from "react-router-dom";
 
 const LoginSignUpComponent = () => {
     return (
         <main className="mt-10 px-10">
             
-            <section className="flex items-center gap-1.5">
-                <img src={logo} height={40} width={40} alt="logo" />
-                <span className="font-bold text-color1"> HelpMeOut </span>
-            </section>
+            <Link to="/">
+                <section className="flex items-center gap-1.5">
+                    <img src={logo} height={40} width={40} alt="logo" />
+                    <span className="font-bold text-color1"> HelpMeOut </span>
+                </section>
+            </Link>
             
             <section className="max-w-[500px] py-10 mx-auto">
                 

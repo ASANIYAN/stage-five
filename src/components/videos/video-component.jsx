@@ -5,6 +5,7 @@ import whatsapp from "../../assets/whatsapp.svg";
 import telegram from "../../assets/telegram.svg";
 import profile_icon from "../../assets/profile_icon.svg";
 import bigger_video_frame from "../../assets/bigger_video_frame.png";
+import { Link } from "react-router-dom";
 
 const VideoComponent = () => {
     const socials = [
@@ -16,10 +17,13 @@ const VideoComponent = () => {
     return (
         <>
             <header className="flex items-center justify-between px-16 mt-10">
-                <section className="flex items-center gap-1.5">
+                
+            <Link to={"/"}>
+                <section className="flex items-center gap-1.5 hover:scale-110 transition-all">
                     <img src={logo} height={40} width={40} alt="logo" />
                     <span className="font-bold text-color1"> HelpMeOut </span>
                 </section>
+            </Link>
 
                 <section className="flex gap-1.5 items-center">
                     <img src={profile_icon} height={40} width={40} alt="profile icon" />

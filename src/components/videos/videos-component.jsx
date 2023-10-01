@@ -2,6 +2,7 @@ import { ArrowDown2, Link1, More, SearchNormal1 } from "iconsax-react";
 import logo from "../../assets/logo.svg";
 import profile_icon from "../../assets/profile_icon.svg";
 import { useCookies } from "react-cookie";
+import { Link } from "react-router-dom";
 
 const VideosComponent = () => {
     const [cookies] = useCookies(['videosURLFromCloudinary']);
@@ -9,10 +10,13 @@ const VideosComponent = () => {
     return (
         <>
             <header className="flex items-center justify-between px-16 mt-10">
-                <section className="flex items-center gap-1.5">
+                
+            <Link to={"/"}>
+                <section className="flex items-center gap-1.5 hover:scale-110 transition-all">
                     <img src={logo} height={40} width={40} alt="logo" />
                     <span className="font-bold text-color1"> HelpMeOut </span>
                 </section>
+            </Link>
 
                 <section className="flex gap-1.5 items-center">
                     <img src={profile_icon} height={40} width={40} alt="profile icon" />
