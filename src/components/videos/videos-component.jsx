@@ -66,6 +66,8 @@ const VideosComponent = () => {
                        ))}
                     </section>
 
+                    { !cookies?.videosURLFromCloudinary && <h2 className="mt-10 text-3xl text-center"> No Recent Files </h2> }
+
                 </section>
 
             </main>
