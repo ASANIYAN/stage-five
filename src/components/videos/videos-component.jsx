@@ -1,9 +1,11 @@
 import { ArrowDown2, Link1, More, SearchNormal1 } from "iconsax-react";
 import logo from "../../assets/logo.svg";
 import profile_icon from "../../assets/profile_icon.svg";
-import video_frame from "../../assets/video_frame.png";
+import { useCookies } from "react-cookie";
 
 const VideosComponent = () => {
+    const [cookies] = useCookies(['videosURLFromCloudinary']);
+
     return (
         <>
             <header className="flex items-center justify-between px-16 mt-10">
@@ -40,82 +42,28 @@ const VideosComponent = () => {
                     
                     <section className="flex flex-wrap gap-6">
                         
-                        <section className="mt-5 w-[550px] h-[320px]">
-                            <section className="border border-color16 bg-color17 p-3 rounded-3xl">
-                                <section className="relative">
-                                    <img src={video_frame} width={"100%"} height={200} alt="video" />
-                                    <div className="absolute bottom-2.5 right-2.5 py-1.5 px-3.5 bg-[#E7E7ED] rounded text-[#08051E] text-sm font-medium"> 00:34 </div>
-                                </section>
-                                <section className="flex justify-between items-center mt-5">
-                                    <section >
-                                        <h5 className="text-color2 text-xl font-medium capitalize"> How to create Facebook Ad listing </h5>
-                                        <span className="capitalize font-normal text-color10 mt-1"> September 23, 2023 </span>
-                                    </section>
-                                    <section className="flex items-center gap-5 h-fit mb-auto">
-                                        <Link1 size="24" color="#141414"/>
-                                        <More size="24" color="#141414" className="-rotate-90" />
-                                    </section>
-                                </section>
-                            </section>
-                        </section>
-                        
-                        <section className="mt-5 w-[550px] h-[320px]">
-                            <section className="border border-color16 bg-color17 p-3 rounded-3xl">
-                                <section className="relative">
-                                    <img src={video_frame} width={"100%"} height={200} alt="video" />
-                                    <div className="absolute bottom-2.5 right-2.5 py-1.5 px-3.5 bg-[#E7E7ED] rounded text-[#08051E] text-sm font-medium"> 00:34 </div>
-                                </section>
-                                <section className="flex justify-between items-center mt-5">
-                                    <section >
-                                        <h5 className="text-color2 text-xl font-medium capitalize"> How to create Facebook Ad listing </h5>
-                                        <span className="capitalize font-normal text-color10 mt-1"> September 23, 2023 </span>
-                                    </section>
-                                    <section className="flex items-center gap-5 h-fit mb-auto">
-                                        <Link1 size="24" color="#141414"/>
-                                        <More size="24" color="#141414" className="-rotate-90" />
+                       {  cookies.videosURLFromCloudinary.map((video, index) => (
+                                <section 
+                                    key={index} 
+                                    className="mt-5 w-[550px] h-[320px]"
+                                >
+                                    <section className="border border-color16 bg-color17 p-3 rounded-3xl">
+                                        <section className="relative">
+                                            <video src={video} className="h-[200px] w-full" controls loop />
+                                        </section>
+                                        <section className="flex justify-between items-center mt-5">
+                                            <section >
+                                                <h5 className="text-color2 text-xl font-medium capitalize"> How to create Facebook Ad listing </h5>
+                                                <span className="capitalize font-normal text-color10 mt-1"> September 23, 2023 </span>
+                                            </section>
+                                            <section className="flex items-center gap-5 h-fit mb-auto">
+                                                <Link1 size="24" color="#141414"/>
+                                                <More size="24" color="#141414" className="-rotate-90" />
+                                            </section>
+                                        </section>
                                     </section>
                                 </section>
-                            </section>
-                        </section>
-                        
-                        <section className="mt-5 w-[550px] h-[320px]">
-                            <section className="border border-color16 bg-color17 p-3 rounded-3xl">
-                                <section className="relative">
-                                    <img src={video_frame} width={"100%"} height={200} alt="video" />
-                                    <div className="absolute bottom-2.5 right-2.5 py-1.5 px-3.5 bg-[#E7E7ED] rounded text-[#08051E] text-sm font-medium"> 00:34 </div>
-                                </section>
-                                <section className="flex justify-between items-center mt-5">
-                                    <section >
-                                        <h5 className="text-color2 text-xl font-medium capitalize"> How to create Facebook Ad listing </h5>
-                                        <span className="capitalize font-normal text-color10 mt-1"> September 23, 2023 </span>
-                                    </section>
-                                    <section className="flex items-center gap-5 h-fit mb-auto">
-                                        <Link1 size="24" color="#141414"/>
-                                        <More size="24" color="#141414" className="-rotate-90" />
-                                    </section>
-                                </section>
-                            </section>
-                        </section>
-
-                        <section className="mt-5 w-[550px] h-[320px]">
-                            <section className="border border-color16 bg-color17 p-3 rounded-3xl">
-                                <section className="relative">
-                                    <img src={video_frame} width={"100%"} height={200} alt="video" />
-                                    <div className="absolute bottom-2.5 right-2.5 py-1.5 px-3.5 bg-[#E7E7ED] rounded text-[#08051E] text-sm font-medium"> 00:34 </div>
-                                </section>
-                                <section className="flex justify-between items-center mt-5">
-                                    <section >
-                                        <h5 className="text-color2 text-xl font-medium capitalize"> How to create Facebook Ad listing </h5>
-                                        <span className="capitalize font-normal text-color10 mt-1"> September 23, 2023 </span>
-                                    </section>
-                                    <section className="flex items-center gap-5 h-fit mb-auto">
-                                        <Link1 size="24" color="#141414"/>
-                                        <More size="24" color="#141414" className="-rotate-90" />
-                                    </section>
-                                </section>
-                            </section>
-                        </section>
-
+                       ))}
                     </section>
 
                 </section>
